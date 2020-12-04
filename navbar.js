@@ -10,7 +10,7 @@ document.getElementById("navbar1").innerHTML = `
 			<div class="collapse navbar-collapse text-center" id="navbarColor01">
 			  <ul class="navbar-nav mr-auto">
 				<li class="nav-item">
-				  <a href="https://arenaps.github.io" class="nav-link" id= "btn-inicio">Inicio</a>
+				  <a href="https://arenaps.github.io/index.html" class="nav-link" id= "btn-inicio">Inicio</a>
 				</li>
 			  </ul>
 			</div>
