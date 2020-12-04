@@ -1,4 +1,4 @@
-Document.getElementById("navbar1").innerHTML = `
+document.getElementById("navbar1").innerHTML = `
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<img src="src/icon.ico" width="50" height="50">
