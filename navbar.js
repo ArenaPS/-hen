@@ -14,8 +14,6 @@ document.getElementById("navbar1").innerHTML = `
 				</li>
 			  </ul>
 			</div>
-			<a href="https://www.youtube.com/channel/UCyqcfxrWTyDuyo2DKjwJLXg"><img width="50" src="https://arenaps.github.io/images/Youtube.png"></a>
-			<a href="https://discord.com/invite/bSskVpXNuR"><img width="50" src="https://arenaps.github.io/images/Discord.webp"></a>
 			
  </nav>
 
