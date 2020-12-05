@@ -36,5 +36,20 @@
 			<br>
 		</div>
 	</body>
-	
+        </div>
+        <script>
+            var nextPageToken = "";
+            // Resultados por pagina
+            var resPorPagina = 5;
+            // Paginas a mostrar
+            var paginas = 1;
+            var key = "AIzaSyBes4_p_YaNpwS8Cx-URQ8dWUnUoGMHHF4";
+            var idCanal = "UCyqcfxrWTyDuyo2DKjwJLXg";
+            var url = "https://www.googleapis.com/youtube/v3/search?key=" + key + "&channelId=" + idCanal + "&part=snippet,id&order=date&maxResults=" + resPorPagina;
+           	console.log(url);
+			   fetch(url, {mode: 'cors'}).then((data) => { 
+					   data.text();
+					   console.log(data.items);
+					   });
+        </script>
 </html>

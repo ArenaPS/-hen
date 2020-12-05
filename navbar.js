@@ -11,6 +11,7 @@ document.getElementById("navbar1").innerHTML = `
 			  <ul class="navbar-nav mr-auto">
 				<li class="nav-item">
 				  <a href="https://arenaps.github.io/index.html" class="nav-link" id= "btn-inicio">Inicio</a>
+				  <a href="https://arenaps.github.io/updates" class="nav-link" id= "btn-inicio">Actualizaciones</a>
 				</li>
 			  </ul>
 			</div>
