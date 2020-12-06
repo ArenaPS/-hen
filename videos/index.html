@@ -12,14 +12,14 @@
         <div id="navbar1"></div>
         <script src="https://arenaps.github.io/navbar.js"></script>
     </head>
-    <body class="bg-dark text-center" style="align-items: center; justify-content: center;">
+    <body class="bg-dark text-center">
 
-        <table style="width: 80%;" class="mx-auto">
+        <table style="width: 95%;" class="mx-auto">
 
             <tr>
                 <div class="card text-white bg-primary mb-3 text-center p-6 mx-auto">
                     <div class="card-body">	
-                    <iframe id="video1" style="width: 80%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe id="video1" style="width: 90%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </tr>
@@ -28,14 +28,14 @@
               <td>
                 <div class="card text-white bg-primary mb-3 text-center p-6 mx-auto">
                     <div class="card-body">	
-                    <iframe id="video2" style="width: 80%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe id="video2" style="width: 90%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
               </td>
               <td>
                 <div class="card text-white bg-primary mb-3 text-center p-6 mx-auto">
                     <div class="card-body">	
-                    <iframe id="video3" style="width: 80%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe id="video3" style="width: 90%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
               </td>
@@ -45,14 +45,31 @@
               <td>
                 <div class="card text-white bg-primary mb-3 text-center p-6 mx-auto">
                     <div class="card-body">	
-                    <iframe id="video4" style="width: 80%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe id="video4" style="width: 90%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
               </td>
               <td>
                 <div class="card text-white bg-primary mb-3 text-center p-6 mx-auto">
                     <div class="card-body">	
-                    <iframe id="video5" style="width: 80%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe id="video5" style="width: 90%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+              </td>          
+            </tr>
+
+            <tr>
+              <td>
+                <div class="card text-white bg-primary mb-3 text-center p-6 mx-auto">
+                    <div class="card-body">	
+                    <iframe id="video6" style="width: 90%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+              </td>
+              <td>
+                <div class="card text-white bg-primary mb-3 text-center p-6 mx-auto">
+                    <div class="card-body">	
+                    <iframe id="video7" style="width: 90%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
               </td>          
@@ -63,7 +80,7 @@
         <script>
             var nextPageToken = "";
             // Resultados por pagina
-            var resPorPagina = 5;
+            var resPorPagina = 8;
             // Paginas a mostrar
             var paginas = 1;
             var key = "AIzaSyBes4_p_YaNpwS8Cx-URQ8dWUnUoGMHHF4";
@@ -77,12 +94,16 @@
                     var video3 = document.getElementById("video3");
                     var video4 = document.getElementById("video4");
                     var video5 = document.getElementById("video5");
+                    var video6 = document.getElementById("video6");
+                    var video7 = document.getElementById("video7");
 
-                    video1.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[0].id.videoId);
-                    video2.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[1].id.videoId);
-                    video3.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[2].id.videoId);
-                    video4.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[3].id.videoId);
-                    video5.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[4].id.videoId);
+                    video1.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[1].id.videoId);
+                    video2.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[2].id.videoId);
+                    video3.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[3].id.videoId);
+                    video4.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[4].id.videoId);
+                    video5.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[5].id.videoId);
+                    video6.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[6].id.videoId);
+                    video7.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[7].id.videoId);
                     });
             
         </script>
