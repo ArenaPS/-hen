@@ -19,7 +19,7 @@ document.getElementById("navbar1").innerHTML = `
 				</li>
 				
 				<li class="nav-item">
-				  <a href="https://arenaps.github.io/updates/index.html" class="nav-link" id= "btn-inicio">Comunidad</a>
+				  <a href="https://arenaps.github.io/comunity/index.html" class="nav-link" id= "btn-inicio">Comunidad</a>
 				</li>
 
 				<li class="nav-item">
