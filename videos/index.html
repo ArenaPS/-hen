@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://arenaps.github.io/bootstrap.css"/>
+        <meta name="theme-color" content="#FFCD33"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="https://arenaps.github.io/icon.png">
+        <meta name="description" content="Pagina Web de Arena PS para estar al tanto en estadisticas y gaming">
+        <meta name="keywords" content="Gaming, ps3, ps4, psn">
+        <meta name="author" content="José Rosendo Soto Reza">
+        <title>Arena Ps</title>
+        <div id="navbar1"></div>
+        <script src="https://arenaps.github.io/navbar.js"></script>
+    </head>
+    <body class="bg-dark text-center" style="align-items: center; justify-content: center;">
+
+        <table style="width: 80%;" class="mx-auto">
+
+            <tr>
+                <div class="card text-white bg-primary mb-3 text-center p-6 mx-auto">
+                    <div class="card-body">	
+                    <iframe id="video1" style="width: 80%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="card text-white bg-primary mb-3 text-center p-6 mx-auto">
+                    <div class="card-body">	
+                    <iframe id="video2" style="width: 80%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+              </td>
+              <td>
+                <div class="card text-white bg-primary mb-3 text-center p-6 mx-auto">
+                    <div class="card-body">	
+                    <iframe id="video3" style="width: 80%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="card text-white bg-primary mb-3 text-center p-6 mx-auto">
+                    <div class="card-body">	
+                    <iframe id="video4" style="width: 80%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+              </td>
+              <td>
+                <div class="card text-white bg-primary mb-3 text-center p-6 mx-auto">
+                    <div class="card-body">	
+                    <iframe id="video5" style="width: 80%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+              </td>          
+            </tr>
+
+          </table>
+
+        <script>
+            var nextPageToken = "";
+            // Resultados por pagina
+            var resPorPagina = 5;
+            // Paginas a mostrar
+            var paginas = 1;
+            var key = "AIzaSyBes4_p_YaNpwS8Cx-URQ8dWUnUoGMHHF4";
+            var idCanal = "UCyqcfxrWTyDuyo2DKjwJLXg";
+            var url = "https://www.googleapis.com/youtube/v3/search?key=" + key + "&channelId=" + idCanal + "&part=snippet,id&order=date&maxResults=" + resPorPagina;
+            fetch(url, {mode: 'cors'})
+            .then((data) => {  return data.json(); })
+                    .then(data => { console.log(data)
+                    var video1 = document.getElementById("video1");
+                    var video2 = document.getElementById("video2");
+                    var video3 = document.getElementById("video3");
+                    var video4 = document.getElementById("video4");
+                    var video5 = document.getElementById("video5");
+
+                    video1.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[0].id.videoId);
+                    video2.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[1].id.videoId);
+                    video3.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[2].id.videoId);
+                    video4.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[3].id.videoId);
+                    video5.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[4].id.videoId);
+                    });
+            
+        </script>
+    </body>
+</html>
