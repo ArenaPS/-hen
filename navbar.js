@@ -9,12 +9,23 @@ document.getElementById("navbar1").innerHTML = `
 			</button>
 			<div class="collapse navbar-collapse text-center" id="navbarColor01">
 			  <ul class="navbar-nav mr-auto">
-			  <li class="nav-item">
+			  
+			 	<li class="nav-item">
 				  <a href="https://arenaps.github.io/index.html" class="nav-link" id= "btn-inicio">Inicio</a>
 				</li>
+				
+				<li class="nav-item">
+				  <a href="https://arenaps.github.io/videos/index.html" class="nav-link" id= "btn-inicio">Videos</a>
+				</li>
+				
+				<li class="nav-item">
+				  <a href="https://arenaps.github.io/updates/index.html" class="nav-link" id= "btn-inicio">Comunidad</a>
+				</li>
+
 				<li class="nav-item">
 				  <a href="https://arenaps.github.io/updates/index.html" class="nav-link" id= "btn-inicio">Actualizaciones</a>
 				</li>
+
 			  </ul>
 			</div>
 			
