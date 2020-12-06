@@ -8,13 +8,9 @@
 	<meta name="description" content="Pagina Web de Arena PS para estar al tanto en estadisticas y gaming">
 	<meta name="keywords" content="Gaming, ps3, ps4, psn">
 	<meta name="author" content="José Rosendo Soto Reza">
-
-	  </head>
-
-		<title>Arena Ps</title>
-
-		<div id="navbar1"></div>
-		<script src="https://arenaps.github.io/navbar.js"></script>
+	<title>Arena Ps</title>
+	<div id="navbar1"></div>
+	<script src="https://arenaps.github.io/navbar.js"></script>
 
 	</head>
 	<body>
@@ -30,26 +26,8 @@
 			<iframe src="https://discord.com/widget?id=774750912660635659&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 			<br>
 			<br>
-			<iframe style="width: 80%;" src="https://www.youtube.com/embed/teC6KZ0Kn_s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			<br>
-			<br>
 			<br>
 		</div>
 	</body>
         </div>
-        <script>
-            var nextPageToken = "";
-            // Resultados por pagina
-            var resPorPagina = 5;
-            // Paginas a mostrar
-            var paginas = 1;
-            var key = "AIzaSyBes4_p_YaNpwS8Cx-URQ8dWUnUoGMHHF4";
-            var idCanal = "UCyqcfxrWTyDuyo2DKjwJLXg";
-            var url = "https://www.googleapis.com/youtube/v3/search?key=" + key + "&channelId=" + idCanal + "&part=snippet,id&order=date&maxResults=" + resPorPagina;
-           	console.log(url);
-			   fetch(url, {mode: 'cors'}).then((data) => { 
-					   data.text();
-					   console.log(data.items);
-					   });
-        </script>
 </html>
