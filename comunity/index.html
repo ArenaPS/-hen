@@ -1,111 +1,43 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://arenaps.github.io/bootstrap.css"/>
-        <meta name="theme-color" content="#FFCD33"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="https://arenaps.github.io/icon.png">
-        <meta name="description" content="Pagina Web de Arena PS para estar al tanto en estadisticas y gaming">
-        <meta name="keywords" content="Gaming, ps3, ps4, psn">
-        <meta name="author" content="José Rosendo Soto Reza">
-        <title>Arena Ps</title>
-        <div id="navbar1"></div>
-        <script src="https://arenaps.github.io/navbar.js"></script>
-    </head>
-    <body class="bg-dark text-center">
+	<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://arenaps.github.io/bootstrap.css"/>
+	<meta name="theme-color" content="#FFCD33"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="https://arenaps.github.io/icon.png">
+	<meta name="description" content="Pagina Web de Arena PS para estar al tanto en estadisticas y gaming">
+	<meta name="keywords" content="Gaming, ps3, ps4, psn">
+	<meta name="author" content="José Rosendo Soto Reza">
+	<title>Arena Ps</title>
+	<div id="navbar1"></div>
+	<script src="https://arenaps.github.io/navbar.js"></script>
 
-        <table style="width: 95%;" class="mx-auto">
-
-            <tr>
-                <div style="background-color: #FFCD33;" class="card text-white mb-3 text-center p-6 mx-auto">
-                    <div class="card-body">	
-                    <iframe id="video1" style="width: 90%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </tr>
-
-            <tr>
-              <td>
-                <div style="background-color: #FFCD33;" class="card text-white mb-3 text-center p-6 mx-auto">
-                    <div class="card-body">	
-                    <iframe id="video2" style="width: 90%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-              </td>
-              <td>
-                <div style="background-color: #FFCD33;" class="card text-white mb-3 text-center p-6 mx-auto">
-                    <div class="card-body">	
-                    <iframe id="video3" style="width: 90%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div style="background-color: #FFCD33;" class="card text-white mb-3 text-center p-6 mx-auto">
-                    <div class="card-body">	
-                    <iframe id="video4" style="width: 90%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-              </td>
-              <td>
-                <div style="background-color: #FFCD33;" class="card text-white mb-3 text-center p-6 mx-auto">
-                    <div class="card-body">	
-                    <iframe id="video5" style="width: 90%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-              </td>          
-            </tr>
-
-            <tr>
-              <td>
-                <div style="background-color: #FFCD33;" class="card text-white mb-3 text-center p-6 mx-auto">
-                    <div class="card-body">	
-                    <iframe id="video6" style="width: 90%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-              </td>
-              <td>
-                <div style="background-color: #FFCD33;" class="card text-white mb-3 text-center p-6 mx-auto">
-                    <div class="card-body">	
-                    <iframe id="video7" style="width: 90%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-              </td>          
-            </tr>
-
-          </table>
-
-        <script>
-            var nextPageToken = "";
-            // Resultados por pagina
-            var resPorPagina = 8;
-            // Paginas a mostrar
-            var paginas = 1;
-            var key = "AIzaSyBes4_p_YaNpwS8Cx-URQ8dWUnUoGMHHF4";
-            var idCanal = "UCyqcfxrWTyDuyo2DKjwJLXg";
-            var url = "https://www.googleapis.com/youtube/v3/search?key=" + key + "&channelId=" + idCanal + "&part=snippet,id&order=date&maxResults=" + resPorPagina;
-            fetch(url, {mode: 'cors'})
-            .then((data) => {  return data.json(); })
-                    .then(data => { console.log(data)
-                    var video1 = document.getElementById("video1");
-                    var video2 = document.getElementById("video2");
-                    var video3 = document.getElementById("video3");
-                    var video4 = document.getElementById("video4");
-                    var video5 = document.getElementById("video5");
-                    var video6 = document.getElementById("video6");
-                    var video7 = document.getElementById("video7");
-
-                    video1.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[1].id.videoId);
-                    video2.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[2].id.videoId);
-                    video3.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[3].id.videoId);
-                    video4.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[4].id.videoId);
-                    video5.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[5].id.videoId);
-                    video6.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[6].id.videoId);
-                    video7.setAttribute( "src", `https://www.youtube.com/embed/` + data.items[7].id.videoId);
-                    });
-            
-        </script>
-    </body>
+	</head>
+	<body>
+		<div class="align-items-center text-center bg-dark text-white">	
+			<div class="mx-auto" style="width: 80%; background-color: #FFCD33;">
+				<br><br>
+				<h1 class="mx-auto" style="background-color: #000000; width: 80%;">Arena PS</h1>
+				<br>
+				<br>
+				<iframe src="https://discord.com/widget?id=774750912660635659&theme=dark" style="width: 90%;" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+				<br>
+				<br>
+			</div>
+			<br>
+			<br>
+			<br>
+			<div class="align-items-center text-center bg-dark text-white">	
+				<div class="mx-auto" style="width: 80%; background-color: #FFCD33;">
+					<br><br>
+					<h1 class="mx-auto" style="background-color: #000000; width: 80%;">Arena PS Gaming</h1>
+					<br>
+					<br>
+					<iframe src="https://discord.com/widget?id=786384328350760960&theme=dark" style="width: 90%;" height="1000" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+					<br>
+					<br>
+				</div>
+		</div>
+	</body>
+        </div>
 </html>
